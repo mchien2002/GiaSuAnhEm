@@ -1,0 +1,106 @@
+.ddsmoothmenu {
+    background: none repeat scroll 0 0 #0c5776;
+    border-radius: 5px;
+    /* font: bold 12px tahoma; */
+    height: 45;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    padding-left: 0;
+}
+
+.ddsmoothmenu ul {
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    /* list-style-type: none; */
+    position: relative;
+    float: right;
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.ddsmoothmenu ul li {
+    position: relative;
+    display: inline;
+    float: left;
+    height: 30px;
+}
+
+.ddsmoothmenu ul li .active {
+    background-repeat: repeat-x;
+    color: var(--colorWhite);
+}
+
+.ddsmoothmenu ul li a {
+        color: var(--colorWhite);
+    display: inline-block;
+    padding: 9px 23px;
+    text-decoration: none;
+    border-right: 1px solid #ffffff46;
+}
+
+ul.nav-menu {
+    top: 30px;
+    box-shadow: rgb(170, 170, 170) 0px 5px 5px;
+    visibility: visible;
+    left: 0px;
+    width: 200px;
+    display: none;
+    position: absolute;
+    background-color: #dcf6f8;
+}
+
+ul.nav-menu a {
+    color: #000000 !important;
+    font-weight: normal;
+}
+
+ul.nav-menu li {
+    display: list-item;
+    float: none;
+    height: 30px;
+    border-bottom: 1px solid #00000035;
+}
+
+ul.nav-menu.dropdown-menu.fade-up {
+    border-radius: unset;
+    font-size: 14px;
+}
+
+ul.nav-menu li:hover a {
+    color: red !important;
+}
+
+.ddsmoothmenu ul li a:hover {
+    background-repeat: repeat-x;
+    color: yellow;
+}
+
+@media all and (min-width: 992px) {
+    .nav-item .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        margin-top: 0;
+    }
+
+    .dropdown-menu.fade-down {
+        top: 80%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+    }
+
+    .dropdown-menu.fade-up {
+        top: 180%;
+    }
+
+    .nav-item:hover .dropdown-menu {
+        transition: .3s;
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+        transform: rotateX(0deg);
+    }
+}
