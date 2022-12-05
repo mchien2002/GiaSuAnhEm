@@ -7,6 +7,7 @@ RUN mvn clean package -DskipTests
 
 #
 # Package stage
+
 #
 FROM openjdk:11-jdk-slim
 COPY --from=build /target/giasuanhem-0.0.1-SNAPSHOT.jar giasuanhem.jar
