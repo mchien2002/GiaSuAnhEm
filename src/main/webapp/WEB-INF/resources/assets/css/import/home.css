@@ -1,0 +1,57 @@
+#main-content-wp{ background: #f7f7f7; padding-top: 25px; padding-bottom: 75px;}
+#page-main {
+    float: right;
+    width:100%;
+}
+
+
+.banner-video-container {
+    position: relative;
+}
+
+span.icon-graduation {
+    font-size: 3.5em;
+    margin-top: 0px;
+    background: url(../../images/tot_nghiep.png) no-repeat left;
+    padding: 10px 52px;
+}
+
+span.menu-ngang {
+    background: #8b0000;
+    color: #eef2f8;
+    padding: 5px 10px !important;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title {
+    padding: 10px 0 10px 10px;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+strong {
+    font-weight: bold;
+}
+
+a:hover {
+    color: #F00;
+    text-decoration: none;
+}
