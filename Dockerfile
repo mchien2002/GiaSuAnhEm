@@ -9,7 +9,7 @@ RUN mvn clean package -DskipTests
 # Package stage
 #
 FROM openjdk:11-jdk-slim
-COPY --from=build /target/giasuanhem-0.0.1-SNAPSHOT.jar giasuanhem.jar
+COPY --from=build /target/TrungTamGiaSu-0.0.1-SNAPSHOT.jar TrungTamGiaSu.jar
 # ENV PORT=8080
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","giasuanhem.jar"]
+ENTRYPOINT ["java","-jar","TrungTamGiaSu.jar"]

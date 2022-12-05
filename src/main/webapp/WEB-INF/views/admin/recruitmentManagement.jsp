@@ -9,36 +9,20 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!----======== CSS ======== -->
-<link rel="stylesheet" href="style.css">
-
+<title>Tuyển dụng</title>
 <!----===== Boxicons CSS ===== -->
 <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'
 	rel='stylesheet'>
 
 <!--<title>Dashboard Sidebar Menu</title>-->
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet"
 	href="./resources/assets/css/bootstrap/bootstrap.min.css">
-<title>GIA SƯ ANH EM</title>
-<script type="module" src="/resources/assets/js/main.js"></script>
 <link href="<c:url value="resources/assets/css/import/header.css"/>"
 	rel="stylesheet">
 <link
 	href="<c:url value="resources/assets/css/font-awesome/css/font-awesome.min.css" />"
 	rel="stylesheet" type="text/css" />
-<link href="<c:url value="resources/assets/css/import/footer.css"/>"
-	rel="stylesheet">
-<link href="<c:url value="resources/assets/css/import/newclass.css"/>"
-	rel="stylesheet">
-<link href="<c:url value="resources/assets/css/import/sidebar.css"/>"
-	rel="stylesheet">
-<link href="<c:url value="resources/assets/css/import/style.css"/>"
-	rel="stylesheet">
 <link
 	href="<c:url value="resources/assets/css/import/admin/editor.css"/>"
 	rel="stylesheet">
@@ -69,9 +53,10 @@
 <script
 	src="<c:url value="resources/assets/js/elevatezoom-master/jquery.elevatezoom.js"/>"
 	type="text/javascript"></script>
-<script
+<!-- <script
 	src="<c:url value="resources/assets/js/bootstrap/bootstrap.min.js"/>"
 	type="text/javascript"></script>
+<script type="module" src="/resources/assets/js/main.js"></script> -->
 <script
 	src="<c:url value="resources/assets/js/carousel/owl.carousel.js"/>"
 	type="text/javascript"></script>
@@ -100,19 +85,20 @@
 					<strong>Quản lý tuyển dụng</strong>
 				</div>
 				<div id="page-main-Admin" style="text-align: center;">
-					<table width="100%">
-						<thead>
+					<table width="100%" class="table table-bordered mb-0 bg-white"
+						style="text-align: left; float: left;">
+						<thead class="bg-white">
 							<tr>
-								<th><strong>Tiêu đề</strong></th>
-								<th><strong>Nội dung</strong></th>
-								<th width="5%"></th>
-								<th width="5%"></th>
+								<th scope="col"><strong>Tiêu đề</strong></th>
+								<th scope="col"><strong>Nội dung</strong></th>
+								<th scope="col" width="3%"></th>
+								<th scope="col" width="3%"></th>
 							</tr>
 						</thead>
-						<tbody>
+						<tbody class="table-group-divider">
 							<c:forEach var="item" items="${ listRecruitPost }">
 								<tr>
-									<td>${item.title }</td>
+									<td scope="col">${item.title }</td>
 									<td>${item.body }</td>
 									<th><a href="./updateRecruitment?id=${item._id}">Update</a></th>
 									<th><a href="./deleteRecruitment?id=${item._id }"
@@ -121,33 +107,41 @@
 							</c:forEach>
 						</tbody>
 					</table>
-					<hr>
 
-					<form action="./createRecruitment" method="post">
-						<div class="form-group">
-							<label style="float: left">Tiêu đề: </label>
-							<div class="col-7" style="width: 100%">
-								<input type="text" name="title" class="form-control" value="">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="container-fluid">
+					<div id="page-main-Admin"
+						style="text-align: center; margin-bottom: 10px; margin-top: 100px">
+						<form action="./createRecruitment" method="post">
+							<div class="form-group">
+								<label style="float: left">Tiêu đề: </label>
+								<div class="col-7" style="width: 100%">
+									<input type="text" name="title" class="form-control"
+										style="border: 2px solid #001c44;" value="">
+								</div>
 							</div>
-						</div>
 
-						<div class="form-group">
-							<label style="float: left">Nội dung: </label>
+							<div class="form-group">
+								<label style="float: left">Nội dung: </label>
 
-							<textarea name="content" rows="50"
-								style="width: 100%; height: 500px; display: inline-block;">${listIntroductionPost[0].body }</textarea>
-						</div>
-						<canvas width="1000" height="10"></canvas>
+								<textarea name="content" rows="50"
+									style="width: 100%; height: 500px; display: inline-block; border: 2px solid #001c44; border-radius: 5px; padding: 10px">${listIntroductionPost[0].body }</textarea>
+							</div>
+							<canvas width="1000" height="10"></canvas>
 
-						<div id="fixedButtonAdd">
-							<button class="btn btn-primary btn-block mb-4" type="submit">Thêm</button>
-						</div>
+							<div id="fixedButtonAdd">
+								<button class="btn btn-primary btn-block mb-4" type="submit">Thêm</button>
+							</div>
 
 
-					</form>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
+		<%@include file="/WEB-INF/views/admin/layout/footer.jsp"%>
 	</section>
-	<%@include file="/WEB-INF/views/admin/layout/footer.jsp"%>
 </body>

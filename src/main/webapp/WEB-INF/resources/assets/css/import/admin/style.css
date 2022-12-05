@@ -16,6 +16,8 @@
 body {
 	min-height: 100vh;
 	font-family: 'Roboto', sans-serif;
+	color:#001c44;
+	background-color:#eef2f8;
 }
 
 ::selection {
@@ -248,7 +250,7 @@ body.dark .mode .sun-moon i.moon {
 .title {
 	margin-top: 40px;
 	font-size: calc(1.375rem + 1.5vw);
-	color: #0d6efd;
+	color: #8b0000;
 }
 
 .dropdown-menu li a {
@@ -262,3 +264,9 @@ body.dark .mode .sun-moon i.moon {
 	background-color: #55acee !important;
 	border-radius: 5px;
 }
+
+.form-control{
+	color: #001c44;
+}
+
+
