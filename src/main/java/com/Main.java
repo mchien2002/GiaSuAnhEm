@@ -1,7 +1,9 @@
 package com;
 
+import org.springframework.boot.SpringApplication;
+
 public class Main{
 	public static void main(String[] args) {
-		System.out.print("Hello ca nha");
+		SpringApplication.run(Main.class, args);
 	}
 }
