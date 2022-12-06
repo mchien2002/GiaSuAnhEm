@@ -1,9 +1,7 @@
 package com;
 
-import org.springframework.boot.SpringApplication;
-
-public class Main{
-	public static void main(String[] args) {
-		SpringApplication.run(Main.class, args);
+public class Main {
+	public static String main(String[] args) {
+		return "redirect:/trang-chu";
 	}
 }
