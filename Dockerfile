@@ -13,4 +13,4 @@ FROM openjdk:11-jdk-slim
 # COPY --from=build /target/giasuanhem-0.0.1-SNAPSHOT.jar giasuanhem.jar
 # ENV PORT=8080
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","target/giasuanhem-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar",".\target\giasuanhem-0.0.1-SNAPSHOT.jar"]
